@@ -13,4 +13,26 @@
 
 ---
 
+## 
+
+
+### Assignment 1
+CRUD students information in students table with
+1. id
+2. name
+3. surname
+4. student id
+5. date of birth
+6. gender
+
+**src:** 06-student-crud-pg
+
+---
+
+### Assignment 2
+Deploy assignment 1 to cloud platform 
+
+
+---
+
 06016422 - Internet of Things - คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
