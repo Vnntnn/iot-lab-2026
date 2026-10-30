@@ -1,12 +1,17 @@
-import { drizzle as drizzlePgsql } from "drizzle-orm/node-postgres";
-import * as schema from "./schema.js";
+import { drizzle } from "drizzle-orm/vercel-postgres";
+import { Pool } from "pg";
 
-const drizzle = drizzlePgsql({
-  casing: "snake_case",
-  connection: {
-    connectionString: process.env.DATABASE_URL,
-  },
-  schema,
+const databaseUrl = process.env.DATABASE_URL;
+
+if (!databaseUrl) {
+  throw new Error("DATABASE_URL is required");
+}
+
+const pool = new Pool({
+  connectionString: databaseUrl,
+  max: 1,
+  idleTimeoutMillis: 20_000,
+  connectionTimeoutMillis: 10_000,
 });
 
-export default drizzle;
+export const db = drizzle({ client: pool });

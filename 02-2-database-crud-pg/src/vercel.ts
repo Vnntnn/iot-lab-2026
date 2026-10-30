@@ -1,3 +1,6 @@
+import { handle } from "hono/vercel";
 import { app } from "./app.js";
 
-export default app;
+const vercelApp = handle(app);
+
+export default vercelApp;

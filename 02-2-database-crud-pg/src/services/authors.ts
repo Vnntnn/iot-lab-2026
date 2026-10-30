@@ -1,5 +1,5 @@
 import { and, eq, notExists } from "drizzle-orm";
-import db from "../db/index.js";
+import { db } from "../db/index.js";
 import { authors, books, type Author } from "../db/schema.js";
 
 export interface AuthorWithBooks extends Author {

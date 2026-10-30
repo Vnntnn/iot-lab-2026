@@ -1,5 +1,5 @@
 import { eq } from "drizzle-orm";
-import db from "../db/index.js";
+import { db } from "../db/index.js";
 import { authors, books, type NewBook } from "../db/schema.js";
 
 const bookSelection = {
