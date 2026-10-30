@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "rootDir": ".",
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*.ts", "api/**/*.ts"],
+  "exclude": ["node_modules"]
+}
